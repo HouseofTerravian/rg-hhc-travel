@@ -1305,6 +1305,21 @@ footer {
 
 .footer-col ul li a:hover { color: var(--teal-light); }
 
+.footer-disclaimer {
+  max-width: 1140px;
+  margin: 0 auto 20px;
+  padding: 14px 20px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.6;
+  text-align: center;
+}
+
+.footer-disclaimer strong { color: rgba(255,255,255,0.6); }
+
 .footer-bottom {
   max-width: 1140px;
   margin: 0 auto;
