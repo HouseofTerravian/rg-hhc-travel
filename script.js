@@ -60,6 +60,24 @@ if (contactForm) {
   });
 });
 
+// Scenario form submission (placeholder)
+const scenarioForm = document.getElementById('scenarioForm');
+if (scenarioForm) {
+  scenarioForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const btn = scenarioForm.querySelector('button[type="submit"]');
+    btn.textContent = 'Scenario Submitted ✓';
+    btn.disabled = true;
+    btn.style.background = 'var(--teal)';
+    setTimeout(() => {
+      btn.textContent = 'Submit Your Scenario';
+      btn.disabled = false;
+      btn.style.background = '';
+      scenarioForm.reset();
+    }, 4000);
+  });
+}
+
 // Intersection observer — fade-in on scroll
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
