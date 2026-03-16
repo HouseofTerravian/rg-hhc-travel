@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>7 Days to Rebuild Trust — Relationship Goals</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:      #0E7C7B;
+      --teal-dark: #085A59;
+      --coral:     #E8603C;
+      --cream:     #FDF6EC;
+      --sand:      #F0E9D8;
+      --text:      #1A2E2E;
+      --text-mid:  #4A6565;
+      --text-dim:  #7A9898;
+      --white:     #FFFFFF;
+    }
+
+    body {
+      font-family: 'Inter', Georgia, serif;
+      background: var(--white);
+      color: var(--text);
+      font-size: 10.5pt;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ===== PAGE WRAPPER ===== */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    /* ===== COVER PAGE ===== */
+    .cover {
+      background: var(--teal-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1in;
+      min-height: 11in;
+    }
+
+    .cover-bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.06;
+    }
+    .cover-bg-circle.c1 { width: 6in; height: 6in; background: var(--coral); top: -2in; right: -2in; }
+    .cover-bg-circle.c2 { width: 4in; height: 4in; background: white; bottom: -1.5in; left: -1.5in; }
+
+    .cover-logo {
+      width: 0.7in;
+      height: 0.7in;
+      background: linear-gradient(135deg, var(--teal), var(--coral));
+      border-radius: 0.15in;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 18pt;
+      color: white;
+      margin: 0 auto 0.3in;
+    }
+
+    .cover-brand {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 0.6in;
+    }
+
+    .cover-divider {
+      width: 0.5in;
+      height: 2pt;
+      background: var(--coral);
+      margin: 0 auto 0.35in;
+    }
+
+    .cover h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 42pt;
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.2in;
+    }
+
+    .cover h1 span { color: var(--coral); font-style: italic; }
+
+    .cover-sub {
+      font-size: 12pt;
+      color: rgba(255,255,255,0.7);
+      max-width: 4.5in;
+      line-height: 1.65;
+      margin: 0 auto 0.5in;
+    }
+
+    .cover-hook {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.6in;
+    }
+
+    .cover-includes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.12in;
+      margin-bottom: 0.6in;
+    }
+
+    .cover-includes span {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.03em;
+    }
+
+    .cover-footer {
+      position: absolute;
+      bottom: 0.4in;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 8pt;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== INTRO PAGE ===== */
+    .intro-page {
+      padding: 0.85in 1in;
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.2in;
+      border-bottom: 1pt solid #D8E8E8;
+      margin-bottom: 0.45in;
+    }
+
+    .page-header .logo-inline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 9pt;
+      color: var(--teal-dark);
+      letter-spacing: 0.05em;
+    }
+
+    .page-header .page-num {
+      font-size: 8pt;
+      color: var(--text-dim);
+    }
+
+    .intro-page h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.2in;
+      line-height: 1.15;
+    }
+
+    .intro-page p {
+      font-size: 10.5pt;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 0.18in;
+      max-width: 5.5in;
+    }
+
+    .intro-callout {
+      background: var(--cream);
+      border-left: 3pt solid var(--teal);
+      border-radius: 4pt;
+      padding: 0.2in 0.25in;
+      margin: 0.3in 0;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13pt;
+      color: var(--teal-dark);
+      line-height: 1.55;
+    }
+
+    .how-to-use {
+      margin-top: 0.3in;
+    }
+
+    .how-to-use h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.15in;
+    }
+
+    .how-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.12in;
+    }
+
+    .how-item {
+      display: flex;
+      gap: 0.15in;
+      align-items: flex-start;
+    }
+
+    .how-num {
+      width: 0.22in;
+      height: 0.22in;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 1pt;
+    }
+
+    .how-item p {
+      font-size: 10pt;
+      color: var(--text-mid);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.1in;
+      margin-top: 0.35in;
+    }
+
+    .overview-day {
+      text-align: center;
+      padding: 0.1in 0.05in;
+      background: var(--cream);
+      border-radius: 6pt;
+      border-top: 2pt solid var(--teal);
+    }
+
+    .overview-day .od-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      line-height: 1;
+      margin-bottom: 4pt;
+    }
+
+    .overview-day .od-label {
+      font-size: 7pt;
+      font-weight: 600;
+      color: var(--text-dim);
+      line-height: 1.3;
+    }
+
+    .intro-footer {
+      margin-top: auto;
+      padding-top: 0.2in;
+      border-top: 1pt solid #D8E8E8;
+      font-size: 8pt;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    /* ===== DAY PAGES ===== */
+    .day-page {
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .day-header {
+      padding: 0.55in 1in 0.4in;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-header.teal { background: var(--teal-dark); }
+    .day-header.coral { background: var(--coral); }
+    .day-header.mixed {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, #0A5A59 100%);
+    }
+
+    .day-header-bg {
+      position: absolute;
+      right: -0.5in;
+      top: -0.5in;
+      width: 3.5in;
+      height: 3.5in;
+      border-radius: 50%;
+      opacity: 0.06;
+      background: white;
+    }
+
+    .day-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.1in;
+    }
+
+    .day-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.05in;
+    }
+
+    .day-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32pt;
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.1in;
+    }
+
+    .day-emoji {
+      font-size: 26pt;
+      margin-bottom: 0.08in;
+      display: block;
+    }
+
+    .day-tagline {
+      font-size: 10.5pt;
+      color: rgba(255,255,255,0.75);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12pt;
+      max-width: 4.5in;
+    }
+
+    .day-content {
+      padding: 0.4in 1in 0.3in;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25in;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.08in;
+    }
+
+    .mission-box {
+      background: var(--cream);
+      border-radius: 8pt;
+      padding: 0.22in 0.28in;
+      border-left: 3pt solid var(--teal);
+    }
+
+    .mission-box p {
+      font-size: 11pt;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .mission-box .mission-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 5pt;
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--teal);
+      margin-top: 0.1in;
+    }
+
+    .why-box {
+      font-size: 9.5pt;
+      color: var(--text-mid);
+      line-height: 1.7;
+      padding: 0.15in 0;
+      border-top: 1pt solid #E8EDED;
+    }
+
+    .prompts-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1in;
+    }
+
+    .prompt-item {
+      display: flex;
+      gap: 0.12in;
+      align-items: flex-start;
+      background: white;
+      border: 1pt solid #D8E8E8;
+      border-radius: 6pt;
+      padding: 0.12in 0.15in;
+    }
+
+    .prompt-icon {
+      font-size: 12pt;
+      flex-shrink: 0;
+      margin-top: 1pt;
+    }
+
+    .prompt-item p {
+      font-size: 10pt;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .reflection-box {
+      border: 1pt dashed #B8D4D4;
+      border-radius: 8pt;
+      padding: 0.18in 0.22in;
+      flex: 1;
+      min-height: 1.2in;
+    }
+
+    .reflection-box .reflection-label {
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.08in;
+    }
+
+    .reflection-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.18in;
+    }
+
+    .reflection-line {
+      height: 1pt;
+      background: #E8EDED;
+      width: 100%;
+    }
+
+    .reward-strip {
+      background: linear-gradient(90deg, var(--teal-dark), #0A5A59);
+      padding: 0.15in 0.28in;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 6pt;
+    }
+
+    .reward-strip p {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    .reward-strip .reward-badge {
+      background: var(--coral);
+      color: white;
+      font-size: 8pt;
+      font-weight: 700;
+      padding: 4pt 10pt;
+      border-radius: 100pt;
+      white-space: nowrap;
+    }
+
+    .day-footer {
+      padding: 0.12in 1in;
+      border-top: 1pt solid #E8EDED;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: var(--text-dim);
+    }
+
+    .day-footer .progress-dots {
+      display: flex;
+      gap: 5pt;
+    }
+
+    .dot-item {
+      width: 8pt;
+      height: 8pt;
+      border-radius: 50%;
+      background: #D8E8E8;
+    }
+
+    .dot-item.done { background: var(--teal); }
+    .dot-item.active { background: var(--coral); }
+
+    /* ===== CLOSING PAGE ===== */
+    .closing-page {
+      background: var(--cream);
+      min-height: 11in;
+      padding: 0.85in 1in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .closing-page h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.2in;
+      line-height: 1.15;
+    }
+
+    .closing-page p {
+      font-size: 10.5pt;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 0.15in;
+      max-width: 5.5in;
+    }
+
+    .next-steps {
+      margin-top: 0.35in;
+    }
+
+    .next-steps h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.18in;
+    }
+
+    .next-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.15in;
+    }
+
+    .next-card {
+      background: white;
+      border-radius: 8pt;
+      padding: 0.2in;
+      border: 1pt solid #D8E8E8;
+    }
+
+    .next-card .nc-icon { font-size: 16pt; margin-bottom: 0.08in; }
+    .next-card h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 5pt;
+    }
+    .next-card p {
+      font-size: 9pt;
+      color: var(--text-mid);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .closing-quote {
+      margin-top: auto;
+      padding: 0.25in 0.3in;
+      background: var(--teal-dark);
+      border-radius: 8pt;
+      text-align: center;
+    }
+
+    .closing-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14pt;
+      font-style: italic;
+      color: white;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .closing-footer {
+      margin-top: 0.2in;
+      text-align: center;
+      font-size: 8pt;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    /* Print overrides */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================= -->
+<!-- COVER PAGE                    -->
+<!-- ============================= -->
+<div class="page cover">
+  <div class="cover-bg-circle c1"></div>
+  <div class="cover-bg-circle c2"></div>
+
+  <div class="cover-logo">RG</div>
+  <div class="cover-brand">Relationship Goals · rg.hhc.travel</div>
+
+  <div class="cover-divider"></div>
+
+  <h1>7 Days to<br /><span>Rebuild Trust</span></h1>
+
+  <p class="cover-sub">
+    A Week of Honest Conversations for Couples Ready to Start Over
+  </p>
+
+  <p class="cover-hook">"Trust is rebuilt in small, repeated acts of honesty and follow-through. This is your first week."</p>
+
+  <div class="cover-includes">
+    <span>✦ &nbsp;7 guided trust-building missions</span>
+    <span>✦ &nbsp;Daily conversation prompts</span>
+    <span>✦ &nbsp;Reflection space for both partners</span>
+    <span>✦ &nbsp;Accountability frameworks</span>
+  </div>
+
+  <div class="cover-footer">
+    © 2026 Chude Muonelo &nbsp;·&nbsp; Crystallize Lovers, a DBA of SlateRiver LLC &nbsp;·&nbsp; All rights reserved.
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- INTRO / HOW TO USE            -->
+<!-- ============================= -->
+<div class="page intro-page">
+  <div class="page-header">
+    <span class="logo-inline">RG · Relationship Goals</span>
+    <span class="page-num">Introduction</span>
+  </div>
+
+  <h2>Before You Begin</h2>
+
+  <p>
+    You picked this up because something broke — or bent further than it should have. Maybe it was a lie. Maybe it was a pattern. Maybe it was a slow drift away from each other that finally reached a point where you couldn't ignore it anymore.
+  </p>
+  <p>
+    Rebuilding trust isn't a conversation — it's a practice. It happens in the small, repeated acts of showing up, being honest when you could have hidden, and keeping your word when no one was checking. This week you start that practice. Together.
+  </p>
+
+  <div class="intro-callout">
+    "Trust isn't something you restore in one apology. It's something you earn back, day by day, with consistency."
+  </div>
+
+  <p>
+    Each day takes about 15–25 minutes. Some of it will be uncomfortable. That discomfort is the work. Both partners need to be fully present — no deflecting, no scorekeeping, no proving. Just showing up honestly.
+  </p>
+
+  <div class="how-to-use">
+    <h3>How To Use This Guide</h3>
+    <div class="how-list">
+      <div class="how-item">
+        <div class="how-num">1</div>
+        <p><strong>Do this together.</strong> Neither partner does this alone. Both read, both respond, both reflect.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">2</div>
+        <p><strong>Keep it private.</strong> What's shared in these exercises stays between you. This is a closed container.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">3</div>
+        <p><strong>No debating, no defending.</strong> When your partner shares, your job is to receive it — not refute it.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">4</div>
+        <p><strong>Write your answers.</strong> The act of writing slows you down and makes things real in a way that talking alone doesn't.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">5</div>
+        <p><strong>Do the days in order.</strong> Each one builds on the last. Jumping ahead won't work.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="overview-grid" style="margin-top:0.3in;">
+    <div class="overview-day"><div class="od-num">1</div><div class="od-label">Map the Breach</div></div>
+    <div class="overview-day"><div class="od-num">2</div><div class="od-label">New Agreements</div></div>
+    <div class="overview-day"><div class="od-num">3</div><div class="od-label">Consistency Practice</div></div>
+    <div class="overview-day"><div class="od-num">4</div><div class="od-label">Transparency</div></div>
+    <div class="overview-day"><div class="od-num">5</div><div class="od-label">Verification Rituals</div></div>
+    <div class="overview-day"><div class="od-num">6</div><div class="od-label">Safety Mapping</div></div>
+    <div class="overview-day"><div class="od-num">7</div><div class="od-label">The Trust Ritual</div></div>
+  </div>
+
+  <div class="intro-footer">
+    This guide is for personal use only. Not for redistribution. · Relationship Goals is not a substitute for licensed therapy or counseling.
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 1                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day One</div>
+    <span class="day-emoji">🗺️</span>
+    <div class="day-title">Map the Breach</div>
+    <div class="day-tagline">You can't rebuild what you haven't honestly named.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Each partner takes a turn answering one question: <em>What, specifically, broke your trust?</em> Not the full story — just the core of it, in plain language. The other partner listens without reacting, without correcting, without explaining. When both have spoken, each partner answers a second question: <em>What do you need to feel safe again?</em> Write the answers down. Keep them.
+        </p>
+        <span class="mission-time">⏱ Allow 20–25 minutes · No phones · Sit facing each other</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> You can't navigate toward trust without first agreeing on where you are. Naming the breach clearly — without minimizing or dramatizing it — is the first act of honesty this week requires. Both of you have to be willing to look directly at it.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The moment my trust broke — or started to — was when..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What hurt most about it wasn't the act itself — it was..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What I need from you to begin feeling safe is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What was hardest to say? What surprised you about hearing your partner?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Rebuild Trust · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 1 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 2                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header coral">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Two</div>
+    <span class="day-emoji">📋</span>
+    <div class="day-title">New Agreements</div>
+    <div class="day-tagline">The old rules didn't hold. You need new ones — ones you both actually made.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Together, write three to five new agreements for your relationship — specific, behavioral, and mutual. Not aspirations. Actual behaviors: what you will do, when, and how. "We will tell each other about conversations that feel risky before they happen." "I will not discuss our problems with my friends without telling you first." These don't have to be permanent — they're starting agreements. Sign them. Date them.
+        </p>
+        <span class="mission-time">⏱ Allow 20–25 minutes · Write them down by hand · Both sign</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Trust without structure is just hope. Agreements give you both a shared standard to hold each other to — and hold yourselves to. The act of writing them together makes them real. The act of signing them makes them serious.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"One thing I need you to consistently do differently going forward is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"One thing I'm willing to do differently — because I know it matters to you — is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"A boundary I need us both to respect from this point forward is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">Which agreement felt most important to you? Which felt hardest to commit to?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Rebuild Trust · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 2 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 3                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header mixed">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Three</div>
+    <span class="day-emoji">🔁</span>
+    <div class="day-title">Consistency Practice</div>
+    <div class="day-tagline">One promise kept today is worth more than ten made yesterday.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Each partner chooses one small, specific promise to keep today — something that takes under 30 minutes and can be verified. Not a grand gesture. A small, keepable act: "I will text you when I arrive." "I will put my phone away at dinner tonight." "I will follow through on the thing I said I'd handle." At the end of the day, check in: Did you do it? How did it feel? What did it mean to your partner that you did?
+        </p>
+        <span class="mission-time">⏱ Choose your promise in the morning · Check in at the end of the day</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Consistency is the only currency trust accepts. You can't buy it back with apologies — you have to earn it back with repeated, reliable action over time. Today is day one of that practice. The promise doesn't have to be large. It has to be kept.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The small thing I chose to do today, and why I chose it, was..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"When you followed through on what you said, the way it made me feel was..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"A pattern I've noticed in myself around keeping promises is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What did today's small act reveal about what trust actually looks like for your partner?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Rebuild Trust · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item active"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 3 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 4                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Four</div>
+    <span class="day-emoji">🔓</span>
+    <div class="day-title">Transparency</div>
+    <div class="day-tagline">Say the thing you'd normally keep to yourself — before you're asked.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Each partner shares one thing they've been keeping from the other — not a confession, but a transparency. Something you've been thinking, feeling, or doing that your partner doesn't know about and probably should. It could be small: "I've been more anxious about us than I've let on." "I talked to my sister about this and I said some things I shouldn't have." The goal isn't drama. It's the practice of offering the truth before it's demanded.
+        </p>
+        <span class="mission-time">⏱ Allow 20 minutes · Share first, discuss after · No interrogating</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Trust dies in secrecy — not always from big secrets, but from the habit of keeping things. Proactive transparency is one of the most powerful signals you can send your partner: I'm not hiding. You don't have to wonder about me. That signal, repeated, is how trust comes back.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"Something I've been keeping to myself that you deserve to know is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The reason I didn't say it sooner was..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What I want you to know about where I am right now — honestly — is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What did it feel like to share that? What did it feel like to receive it?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Rebuild Trust · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 4 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 5                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header coral">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Five</div>
+    <span class="day-emoji">✅</span>
+    <div class="day-title">Verification Rituals</div>
+    <div class="day-tagline">Checking in isn't surveillance. Done right, it's care.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Together, design two or three daily check-in rituals — specific, brief, and mutual. Not "we'll just talk more." Actual rituals: a morning text that says where you'll be, a five-minute end-of-day share ("Today I felt..."), a weekly review of the agreements you made on Day 2. These rituals aren't proof of distrust. They're the scaffolding trust grows on while it's still fragile. Write them down, agree on them, and start one today.
+        </p>
+        <span class="mission-time">⏱ Allow 15–20 minutes · Make them realistic — you'll actually have to do these</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Anxiety about a partner's behavior often comes from ambiguity — not knowing, having to wonder, filling in the blanks. Rituals remove the ambiguity. They're not about control. They're about making reassurance a routine rather than a crisis response.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The check-in that would help me feel most settled is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"A check-in I'm willing to do consistently — because I know it matters to you — is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What I want these rituals to feel like — not controlling, but more like..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">Which ritual will you start today? What would it mean if you kept it for 30 days straight?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Rebuild Trust · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 5 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 6                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header mixed">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Six</div>
+    <span class="day-emoji">🏠</span>
+    <div class="day-title">Safety Mapping</div>
+    <div class="day-tagline">What does feeling safe with you actually look like? Map it together.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Each partner answers two questions — separately, in writing, then share. First: <em>What makes me feel emotionally safe with you?</em> List three to five specific things. Second: <em>What makes me feel unsafe or on-guard?</em> Again, specific — not character attacks, but behaviors and situations. Share your lists without defensiveness. Together, circle the overlapping themes. These become your trust map: what to keep doing, and what to stop.
+        </p>
+        <span class="mission-time">⏱ Allow 20–25 minutes · Write separately first · Share without defending</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Most partners have never explicitly told each other what safety feels like. They assume the other person knows — and then feel betrayed when it isn't delivered. Safety mapping takes the guesswork out. You can't create a feeling your partner hasn't described to you.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"I feel most safe with you when you..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"I start to feel guarded when..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What I most need you to understand about my sense of safety is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What on your partner's list surprised you? What will you do differently starting tomorrow?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Rebuild Trust · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 6 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 7                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Seven</div>
+    <span class="day-emoji">🕯️</span>
+    <div class="day-title">The Trust Ritual</div>
+    <div class="day-tagline">A deliberate, shared act of choosing to believe in each other again.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Create a trust ritual you'll repeat weekly — a brief, intentional act that symbolizes your commitment to rebuilding. It could be reading your Day 2 agreements together. It could be a short check-in over tea or coffee: "One thing that made me feel trusted this week... One thing I want to do better..." It doesn't need to be long. It needs to be kept. Do the ritual tonight for the first time. Schedule it for the next four weeks.
+        </p>
+        <span class="mission-time">⏱ Allow 20 minutes tonight · Schedule the next four occurrences · Keep them</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Trust rebuilt without maintenance erodes again. The weekly ritual is how you protect what you've built this week — not by revisiting the wound, but by reaffirming the commitment. Something small, done together, on purpose, every week. That's what lasting trust actually looks like.
+    </div>
+
+    <div>
+      <div class="section-label">Prompts for Your Ritual</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"One moment this week when I felt trust between us was..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"One thing I want to keep doing for you — because it matters — is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"I'm choosing to keep building this with you because..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Your Commitment — Write It Here</div>
+      <div class="reflection-box" style="min-height:1.4in;">
+        <div class="reflection-label">Our weekly trust ritual will be:</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ You completed all 7 days. Your vacation credits are waiting.</p>
+      <span class="reward-badge">Claim Credits →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Rebuild Trust · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item active"></div>
+    </div>
+    <span>Day 7 of 7 · Complete</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- CLOSING PAGE                  -->
+<!-- ============================= -->
+<div class="page closing-page">
+  <div class="page-header">
+    <span class="logo-inline">RG · Relationship Goals</span>
+    <span class="page-num">What's Next</span>
+  </div>
+
+  <h2>Seven days.<br />Seven honest choices.</h2>
+
+  <p>Most people talk about rebuilding trust. Very few actually sit down, face each other, and do the work. You did. That's not a small thing — it's actually one of the hardest things two people can choose to do together.</p>
+
+  <p>One week doesn't complete the rebuild. But it starts it. And every week you continue — with the rituals, the agreements, the transparency — the foundation gets stronger.</p>
+
+  <div class="next-steps">
+    <h3>Continue the Practice</h3>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="nc-icon">📅</div>
+        <h4>Daily Love Missions</h4>
+        <p>Keep your momentum going with daily $0.99 missions at rg.hhc.travel. Each one earns you rewards while keeping you connected.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">🗺️</div>
+        <h4>30-Day Trust Track</h4>
+        <p>Go deeper with our full 30-day trust rebuilding program — designed for couples navigating the long road back after a real breach.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">🎁</div>
+        <h4>Redeem Your Rewards</h4>
+        <p>Check your vacation credits and local business coupons in your RG account. Seven days of work — earned seven rewards.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">✈️</div>
+        <h4>Plan Your Trip</h4>
+        <p>Your vacation credits are redeemable through Happy Holiday Couples Travel at HHC.travel. There's something to look forward to.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-quote" style="margin-top:0.35in;">
+    <p>"Trust isn't restored in the moment you decide to rebuild it.<br />It's restored in the thousand small moments after — when you keep showing up anyway."</p>
+  </div>
+
+  <div class="closing-footer">
+    rg.hhc.travel &nbsp;·&nbsp; © 2026 Chude Muonelo. All rights reserved.<br />
+    Crystallize Lovers, a DBA of SlateRiver LLC, a New Mexico LLC<br />
+    <br />
+    This guide is for personal use only and is not to be redistributed, resold, or reproduced without written permission.<br />
+    Relationship Goals is not a substitute for licensed therapy, counseling, or mental health treatment.
+  </div>
+</div>
+
+</body>
+</html>

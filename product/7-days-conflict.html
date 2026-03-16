@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>7 Days to Break Your Conflict Cycle — Relationship Goals</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:      #0E7C7B;
+      --teal-dark: #085A59;
+      --coral:     #E8603C;
+      --cream:     #FDF6EC;
+      --sand:      #F0E9D8;
+      --text:      #1A2E2E;
+      --text-mid:  #4A6565;
+      --text-dim:  #7A9898;
+      --white:     #FFFFFF;
+    }
+
+    body {
+      font-family: 'Inter', Georgia, serif;
+      background: var(--white);
+      color: var(--text);
+      font-size: 10.5pt;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ===== PAGE WRAPPER ===== */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    /* ===== COVER PAGE ===== */
+    .cover {
+      background: var(--teal-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1in;
+      min-height: 11in;
+    }
+
+    .cover-bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.06;
+    }
+    .cover-bg-circle.c1 { width: 6in; height: 6in; background: var(--coral); top: -2in; right: -2in; }
+    .cover-bg-circle.c2 { width: 4in; height: 4in; background: white; bottom: -1.5in; left: -1.5in; }
+
+    .cover-logo {
+      width: 0.7in;
+      height: 0.7in;
+      background: linear-gradient(135deg, var(--teal), var(--coral));
+      border-radius: 0.15in;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 18pt;
+      color: white;
+      margin: 0 auto 0.3in;
+    }
+
+    .cover-brand {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 0.6in;
+    }
+
+    .cover-divider {
+      width: 0.5in;
+      height: 2pt;
+      background: var(--coral);
+      margin: 0 auto 0.35in;
+    }
+
+    .cover h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 38pt;
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.2in;
+    }
+
+    .cover h1 span { color: var(--coral); font-style: italic; }
+
+    .cover-sub {
+      font-size: 12pt;
+      color: rgba(255,255,255,0.7);
+      max-width: 4.5in;
+      line-height: 1.65;
+      margin: 0 auto 0.5in;
+    }
+
+    .cover-hook {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.6in;
+    }
+
+    .cover-includes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.12in;
+      margin-bottom: 0.6in;
+    }
+
+    .cover-includes span {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.03em;
+    }
+
+    .cover-footer {
+      position: absolute;
+      bottom: 0.4in;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 8pt;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== INTRO PAGE ===== */
+    .intro-page {
+      padding: 0.85in 1in;
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.2in;
+      border-bottom: 1pt solid #D8E8E8;
+      margin-bottom: 0.45in;
+    }
+
+    .page-header .logo-inline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 9pt;
+      color: var(--teal-dark);
+      letter-spacing: 0.05em;
+    }
+
+    .page-header .page-num {
+      font-size: 8pt;
+      color: var(--text-dim);
+    }
+
+    .intro-page h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.2in;
+      line-height: 1.15;
+    }
+
+    .intro-page p {
+      font-size: 10.5pt;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 0.18in;
+      max-width: 5.5in;
+    }
+
+    .intro-callout {
+      background: var(--cream);
+      border-left: 3pt solid var(--teal);
+      border-radius: 4pt;
+      padding: 0.2in 0.25in;
+      margin: 0.3in 0;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13pt;
+      color: var(--teal-dark);
+      line-height: 1.55;
+    }
+
+    .how-to-use {
+      margin-top: 0.3in;
+    }
+
+    .how-to-use h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.15in;
+    }
+
+    .how-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.12in;
+    }
+
+    .how-item {
+      display: flex;
+      gap: 0.15in;
+      align-items: flex-start;
+    }
+
+    .how-num {
+      width: 0.22in;
+      height: 0.22in;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 1pt;
+    }
+
+    .how-item p {
+      font-size: 10pt;
+      color: var(--text-mid);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.1in;
+      margin-top: 0.35in;
+    }
+
+    .overview-day {
+      text-align: center;
+      padding: 0.1in 0.05in;
+      background: var(--cream);
+      border-radius: 6pt;
+      border-top: 2pt solid var(--teal);
+    }
+
+    .overview-day .od-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      line-height: 1;
+      margin-bottom: 4pt;
+    }
+
+    .overview-day .od-label {
+      font-size: 7pt;
+      font-weight: 600;
+      color: var(--text-dim);
+      line-height: 1.3;
+    }
+
+    .intro-footer {
+      margin-top: auto;
+      padding-top: 0.2in;
+      border-top: 1pt solid #D8E8E8;
+      font-size: 8pt;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    /* ===== DAY PAGES ===== */
+    .day-page {
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .day-header {
+      padding: 0.55in 1in 0.4in;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-header.teal { background: var(--teal-dark); }
+    .day-header.coral { background: var(--coral); }
+    .day-header.mixed {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, #0A5A59 100%);
+    }
+
+    .day-header-bg {
+      position: absolute;
+      right: -0.5in;
+      top: -0.5in;
+      width: 3.5in;
+      height: 3.5in;
+      border-radius: 50%;
+      opacity: 0.06;
+      background: white;
+    }
+
+    .day-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.05in;
+    }
+
+    .day-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32pt;
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.1in;
+    }
+
+    .day-emoji {
+      font-size: 26pt;
+      margin-bottom: 0.08in;
+      display: block;
+    }
+
+    .day-tagline {
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12pt;
+      color: rgba(255,255,255,0.75);
+      max-width: 4.5in;
+    }
+
+    .day-content {
+      padding: 0.4in 1in 0.3in;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25in;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.08in;
+    }
+
+    .mission-box {
+      background: var(--cream);
+      border-radius: 8pt;
+      padding: 0.22in 0.28in;
+      border-left: 3pt solid var(--teal);
+    }
+
+    .mission-box p {
+      font-size: 11pt;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .mission-box .mission-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 5pt;
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--teal);
+      margin-top: 0.1in;
+    }
+
+    .why-box {
+      font-size: 9.5pt;
+      color: var(--text-mid);
+      line-height: 1.7;
+      padding: 0.15in 0;
+      border-top: 1pt solid #E8EDED;
+    }
+
+    .prompts-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1in;
+    }
+
+    .prompt-item {
+      display: flex;
+      gap: 0.12in;
+      align-items: flex-start;
+      background: white;
+      border: 1pt solid #D8E8E8;
+      border-radius: 6pt;
+      padding: 0.12in 0.15in;
+    }
+
+    .prompt-icon {
+      font-size: 12pt;
+      flex-shrink: 0;
+      margin-top: 1pt;
+    }
+
+    .prompt-item p {
+      font-size: 10pt;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .reflection-box {
+      border: 1pt dashed #B8D4D4;
+      border-radius: 8pt;
+      padding: 0.18in 0.22in;
+      flex: 1;
+      min-height: 1.2in;
+    }
+
+    .reflection-box .reflection-label {
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.08in;
+    }
+
+    .reflection-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.18in;
+    }
+
+    .reflection-line {
+      height: 1pt;
+      background: #E8EDED;
+      width: 100%;
+    }
+
+    .reward-strip {
+      background: linear-gradient(90deg, var(--teal-dark), #0A5A59);
+      padding: 0.15in 0.28in;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 6pt;
+    }
+
+    .reward-strip p {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    .reward-strip .reward-badge {
+      background: var(--coral);
+      color: white;
+      font-size: 8pt;
+      font-weight: 700;
+      padding: 4pt 10pt;
+      border-radius: 100pt;
+      white-space: nowrap;
+    }
+
+    .day-footer {
+      padding: 0.12in 1in;
+      border-top: 1pt solid #E8EDED;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: var(--text-dim);
+    }
+
+    .day-footer .progress-dots {
+      display: flex;
+      gap: 5pt;
+    }
+
+    .dot-item {
+      width: 8pt;
+      height: 8pt;
+      border-radius: 50%;
+      background: #D8E8E8;
+    }
+
+    .dot-item.done { background: var(--teal); }
+    .dot-item.active { background: var(--coral); }
+
+    /* ===== CLOSING PAGE ===== */
+    .closing-page {
+      background: var(--cream);
+      min-height: 11in;
+      padding: 0.85in 1in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .closing-page h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.2in;
+      line-height: 1.15;
+    }
+
+    .closing-page p {
+      font-size: 10.5pt;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 0.15in;
+      max-width: 5.5in;
+    }
+
+    .next-steps {
+      margin-top: 0.35in;
+    }
+
+    .next-steps h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.18in;
+    }
+
+    .next-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.15in;
+    }
+
+    .next-card {
+      background: white;
+      border-radius: 8pt;
+      padding: 0.2in;
+      border: 1pt solid #D8E8E8;
+    }
+
+    .next-card .nc-icon { font-size: 16pt; margin-bottom: 0.08in; }
+    .next-card h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 5pt;
+    }
+    .next-card p {
+      font-size: 9pt;
+      color: var(--text-mid);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .closing-quote {
+      margin-top: auto;
+      padding: 0.25in 0.3in;
+      background: var(--teal-dark);
+      border-radius: 8pt;
+      text-align: center;
+    }
+
+    .closing-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14pt;
+      font-style: italic;
+      color: white;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .closing-footer {
+      margin-top: 0.2in;
+      text-align: center;
+      font-size: 8pt;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    /* Print overrides */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================= -->
+<!-- COVER PAGE                    -->
+<!-- ============================= -->
+<div class="page cover">
+  <div class="cover-bg-circle c1"></div>
+  <div class="cover-bg-circle c2"></div>
+
+  <div class="cover-logo">RG</div>
+  <div class="cover-brand">Relationship Goals · rg.hhc.travel</div>
+
+  <div class="cover-divider"></div>
+
+  <h1>7 Days to Break Your<br /><span>Conflict Cycle</span></h1>
+
+  <p class="cover-sub">
+    A Week of Honest Reckoning With How You Fight — and How to Fight Better
+  </p>
+
+  <p class="cover-hook">"Every couple has a conflict pattern. This week you learn yours — and start to change it."</p>
+
+  <div class="cover-includes">
+    <span>✦ &nbsp;7 guided conflict-resolution missions</span>
+    <span>✦ &nbsp;Pattern analysis and escalation maps</span>
+    <span>✦ &nbsp;Reflection space for both partners</span>
+    <span>✦ &nbsp;Practical rules of engagement you'll keep</span>
+  </div>
+
+  <div class="cover-footer">
+    © 2026 Chude Muonelo &nbsp;·&nbsp; Crystallize Lovers, a DBA of SlateRiver LLC &nbsp;·&nbsp; All rights reserved.
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- INTRO / HOW TO USE            -->
+<!-- ============================= -->
+<div class="page intro-page">
+  <div class="page-header">
+    <span class="logo-inline">RG · Relationship Goals</span>
+    <span class="page-num">Introduction</span>
+  </div>
+
+  <h2>Before You Begin</h2>
+
+  <p>
+    You fight. That's not the problem. Every couple fights — the ones who stay together and the ones who don't. The difference isn't whether conflict exists. It's whether the conflict leaves you further apart or finds a way back to each other.
+  </p>
+  <p>
+    You're here because your current pattern isn't working. Maybe it escalates fast. Maybe one of you shuts down while the other pushes harder. Maybe nothing ever gets resolved — the argument ends, but nothing actually changes. This week you look at that pattern honestly, understand it, and start to replace it with something that actually works.
+  </p>
+
+  <div class="intro-callout">
+    "You're not fighting each other. You're both fighting to feel heard, valued, and safe. Once you know that, everything changes."
+  </div>
+
+  <p>
+    This is some of the most honest work a couple can do. It requires both of you to look at your own behavior — not just your partner's — without defensiveness. That's hard. It's also how this gets better.
+  </p>
+
+  <div class="how-to-use">
+    <h3>How To Use This Guide</h3>
+    <div class="how-list">
+      <div class="how-item">
+        <div class="how-num">1</div>
+        <p><strong>Do these exercises when you're calm.</strong> Not mid-argument. Not right after one. Give yourself at least an hour of peace before you sit down with this guide.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">2</div>
+        <p><strong>Focus on yourself, not your partner.</strong> The goal is insight, not indictment. Stay in your own lane — you'll notice your partner doing the same.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">3</div>
+        <p><strong>Write before you talk.</strong> Writing slows down the reactivity. Do the written parts before you share anything out loud.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">4</div>
+        <p><strong>Stay curious, not combative.</strong> This week is about understanding how you both work, not about proving who's been doing it wrong.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">5</div>
+        <p><strong>Keep your commitments.</strong> The things you agree to in these pages only matter if you actually do them afterward.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="overview-grid" style="margin-top:0.3in;">
+    <div class="overview-day"><div class="od-num">1</div><div class="od-label">Conflict Autopsy</div></div>
+    <div class="overview-day"><div class="od-num">2</div><div class="od-label">Escalation Map</div></div>
+    <div class="overview-day"><div class="od-num">3</div><div class="od-label">The Pause</div></div>
+    <div class="overview-day"><div class="od-num">4</div><div class="od-label">Apology Language</div></div>
+    <div class="overview-day"><div class="od-num">5</div><div class="od-label">The Need Beneath</div></div>
+    <div class="overview-day"><div class="od-num">6</div><div class="od-label">Rules of Engagement</div></div>
+    <div class="overview-day"><div class="od-num">7</div><div class="od-label">The Repair Ritual</div></div>
+  </div>
+
+  <div class="intro-footer">
+    This guide is for personal use only. Not for redistribution. · Relationship Goals is not a substitute for licensed therapy or counseling.
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 1                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day One</div>
+    <span class="day-emoji">🔍</span>
+    <div class="day-title">Conflict Autopsy</div>
+    <div class="day-tagline">Pick one recent fight. Examine it — not to assign blame, but to understand what actually happened.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Together, choose one recent argument — not the worst one you've ever had, but a fairly typical one. Each partner writes a brief account of the same fight from their own perspective: what triggered it, what they felt at each stage, what they did, and how it ended. Then share the accounts out loud. No correcting each other's memory. The goal is to see how differently you experienced the exact same argument — and what that tells you about your pattern.
+        </p>
+        <span class="mission-time">⏱ Allow 25–30 minutes · Write first, then compare · Curiosity, not rebuttal</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Two people can live through the exact same argument and experience entirely different events. When you compare your accounts without judgment, you see the gap — and understanding that gap is the first step toward closing it. The autopsy isn't about the fight. It's about the pattern inside the fight.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"From my side, the argument started when... and here's what I felt at that moment..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The point where it escalated for me was when... and what I did next was..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What I was actually hoping for in that argument — underneath all of it — was..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What in your partner's account surprised you most? Where did your two experiences diverge?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Break Your Conflict Cycle · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 1 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 2                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header coral">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Two</div>
+    <span class="day-emoji">📈</span>
+    <div class="day-title">Escalation Mapping</div>
+    <div class="day-tagline">Your arguments don't explode — they build. Today you find the steps.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Using the same argument from yesterday — or a different typical one — each partner maps out the escalation in sequence. Start at the spark (the first moment something felt off) and trace each step: what was said or done, what each of you felt, what happened next. Draw it as a timeline or a numbered list. Then compare your maps. Where do you both agree the escalation happened? Where is the gap? Together, identify the one or two pivot points — the moments where the argument could have gone differently.
+        </p>
+        <span class="mission-time">⏱ Allow 25 minutes · Write your map separately first · Find the pivot points together</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Arguments feel chaotic in the moment, but they almost always follow the same sequence — your sequence, specific to your relationship. Once you can see the staircase, you can interrupt it. You can't stop something you've never actually traced.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The first sign — for me — that we were heading somewhere bad was..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The step where I tend to add fuel instead of slowing things down is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The moment I now wish we had paused — and what I wish one of us had said instead..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What's the earliest intervention point in your escalation pattern? What would you do differently there?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Break Your Conflict Cycle · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 2 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 3                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header mixed">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Three</div>
+    <span class="day-emoji">⏸️</span>
+    <div class="day-title">The Pause Practice</div>
+    <div class="day-tagline">The pause is not giving up. It's the most powerful move available to you mid-conflict.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Together, design your pause protocol — a specific, agreed-upon way to call a pause mid-argument before things go sideways. It needs three things: a signal (a word, phrase, or gesture that means <em>I need to stop and I'm not abandoning the conversation</em>), a duration (how long you'll take — 20 minutes minimum, not more than a day), and a return (how you'll come back). Write it down. Then each partner practices saying the signal out loud right now, without an argument attached to it. It should feel familiar before you need it.
+        </p>
+        <span class="mission-time">⏱ Allow 20 minutes · Design the protocol together · Practice the signal before you need it</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> You cannot reason your way through an argument when your nervous system is in fight-or-flight. The pause is what lets the system come down enough to actually think. A pause with a clear return is not avoidance — it's the precondition for a real conversation. The couples who use it well fight better, not less.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The way I know I'm past the point of productive conversation is when I start to..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"When my partner calls a pause, what I need to hear to not feel abandoned is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"Our pause protocol: the signal is... the duration is... we come back by saying..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">Write your full pause protocol here so both of you know it by heart.</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Break Your Conflict Cycle · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item active"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 3 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 4                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Four</div>
+    <span class="day-emoji">🙇</span>
+    <div class="day-title">Apology Language</div>
+    <div class="day-tagline">An apology that doesn't land isn't an apology — it's words. Today you learn each other's language.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Each partner answers: what does a real apology actually need to contain for you to feel it? Not what you've been told an apology should be — what actually works for <em>you</em>, from this specific person. Share your answers. Then each partner apologizes — out loud, using the other person's stated language — for something real from a recent argument. Not a blanket apology. A specific one, using the words and form your partner just told you they need. Receive it without scoring it.
+        </p>
+        <span class="mission-time">⏱ Allow 25 minutes · Learn their language first · The apology comes second</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Most apologies fail because they're delivered in the apologizer's language, not the receiver's. One person needs acknowledgment; the other needs a behavioral commitment. One needs the words said plainly; the other needs to see genuine remorse. Learning your partner's apology language is one of the most specific and practical acts of love available to you.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"For an apology to actually land with me, it needs to include..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What makes an apology feel hollow or incomplete to me is when..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"One thing I genuinely owe you an apology for — said in your language — is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What in your partner's apology language surprised you? How will you use it differently going forward?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Break Your Conflict Cycle · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 4 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 5                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header coral">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Five</div>
+    <span class="day-emoji">🌊</span>
+    <div class="day-title">The Need Beneath</div>
+    <div class="day-tagline">Arguments are rarely about what they're about. Today you find the real thing underneath.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Choose one recurring argument — the one you keep having, the one that never fully resolves. Each partner asks themselves: <em>What am I actually needing when this argument starts?</em> Not the surface complaint — the underlying need. Security? Acknowledgment? Space? To feel like a priority? To not feel controlled? Write your answer privately, then share it. Together, ask: are we actually in conflict over a real disagreement — or are we both reaching for the same underlying need and missing each other?
+        </p>
+        <span class="mission-time">⏱ Allow 25 minutes · Go deeper than the surface topic · This is the real work</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Most recurring arguments are unsolvable at the surface level because they're not surface-level problems. They're two people with legitimate underlying needs who haven't found a way to make both needs visible at the same time. When you name the need, you remove the argument's fuel. You can't compromise on a surface position, but you can almost always find a way to meet both needs.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"When this argument starts, the need I'm actually reaching for underneath it is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"I've been expressing that need by arguing about [topic] instead of just saying..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"If both our underlying needs are real, a way we could both be met is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">Name the underlying need on both sides. Does the recurring argument look different now that you can see them both?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Break Your Conflict Cycle · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 5 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 6                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header mixed">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Six</div>
+    <span class="day-emoji">📜</span>
+    <div class="day-title">Rules of Engagement</div>
+    <div class="day-tagline">Every relationship needs a constitution for conflict. Write yours today.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Together, write your relationship's rules of engagement — a short, agreed-upon list of what's allowed and what's off the table in a conflict. These aren't general principles; they're specific to your patterns. "We don't bring up past arguments that were already resolved." "We don't use language like 'you always' or 'you never.'" "We don't threaten to leave unless we mean it." "We don't involve other people mid-fight." Aim for five to eight specific rules you both genuinely commit to. Sign the list. Post it somewhere.
+        </p>
+        <span class="mission-time">⏱ Allow 25–30 minutes · Both propose, both agree · Specific is better than general</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Conflict without rules becomes war. Rules don't stop the disagreement — they contain it. They make the difference between a fight that eventually ends and one that damages something that can't be repaired. Your rules are a form of mutual protection. They're how you say: even when we're at our worst, we refuse to destroy each other.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"Something that happens in our fights that I need us to agree is off-limits is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"A behavior I'm willing to commit to stopping — because I know it makes things worse — is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The most important rule on our list, to me, is... because..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">List your top rules of engagement here. These belong somewhere you can both see them.</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ Complete today's mission to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Break Your Conflict Cycle · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 6 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 7                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Seven</div>
+    <span class="day-emoji">🤝</span>
+    <div class="day-title">The Repair Ritual</div>
+    <div class="day-tagline">Fighting is part of being human. Knowing how to come back is the whole skill.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Mission</div>
+      <div class="mission-box">
+        <p>
+          Design your post-conflict repair ritual — a specific, brief sequence you both do after a real argument to signal that you're back. Not a forced conversation to process everything. A ritual: it could be physical (a hug held for longer than feels comfortable), verbal ("We're okay — we came back"), or a shared activity that resets the mood without requiring everything to be resolved first. Practice it right now, after this week of work. Then schedule a monthly check-in where you review how you're doing with the rules, the pause, and the repair — and adjust as needed.
+        </p>
+        <span class="mission-time">⏱ Allow 20–25 minutes · Design and practice the ritual tonight · Schedule your first monthly review</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> The space after a conflict is fragile. Without a clear repair ritual, both partners are left guessing — Is it over? Are we okay? The ritual removes the guesswork. It signals: we are still us. That signal, practiced and reliable, is what turns conflict from a threat into a normal, survivable part of intimacy.
+    </div>
+
+    <div>
+      <div class="section-label">Prompts for Your Ritual</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"What I need to feel — physically or emotionally — to know that we're okay again is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"The thing I most want you to know, after any argument we have, is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"Our repair ritual — what we'll do, what we'll say, how we'll know it's done — is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Our Repair Ritual — Write It Here</div>
+      <div class="reflection-box" style="min-height:1.4in;">
+        <div class="reflection-label">Our post-conflict repair ritual:</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>✓ You completed all 7 days. Your vacation credits are waiting.</p>
+      <span class="reward-badge">Claim Credits →</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Break Your Conflict Cycle · Relationship Goals by HHC Travel · rg.hhc.travel · Not a counseling service</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item active"></div>
+    </div>
+    <span>Day 7 of 7 · Complete</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- CLOSING PAGE                  -->
+<!-- ============================= -->
+<div class="page closing-page">
+  <div class="page-header">
+    <span class="logo-inline">RG · Relationship Goals</span>
+    <span class="page-num">What's Next</span>
+  </div>
+
+  <h2>You looked at the hard thing.<br />Together.</h2>
+
+  <p>Most couples never dissect their conflict pattern — not because they don't want to change it, but because looking at it feels too risky. You did it anyway. You named the escalation. You built the pause. You wrote the rules. That takes real courage and real trust in each other.</p>
+
+  <p>The cycle isn't gone — not after a week. But you know it now. You've named it, mapped it, and built tools to interrupt it. That changes everything about what happens next time.</p>
+
+  <div class="next-steps">
+    <h3>Continue the Practice</h3>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="nc-icon">📅</div>
+        <h4>Daily Love Missions</h4>
+        <p>Keep building with daily $0.99 missions at rg.hhc.travel. Each one earns rewards and deepens the practice.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">🗺️</div>
+        <h4>Go Deeper</h4>
+        <p>Continue with our 30-day conflict resolution program or the communication reset track — both build directly on this week's work.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">🎁</div>
+        <h4>Redeem Your Rewards</h4>
+        <p>Check your vacation credits and local business coupons in your RG account. You worked for them — claim them.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">✈️</div>
+        <h4>Plan Your Trip</h4>
+        <p>Your vacation credits are redeemable through Happy Holiday Couples Travel at HHC.travel. Plan something to look forward to together.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-quote" style="margin-top:0.35in;">
+    <p>"You're not trying to stop fighting.<br />You're learning to fight in a way that brings you back to each other every time."</p>
+  </div>
+
+  <div class="closing-footer">
+    rg.hhc.travel &nbsp;·&nbsp; © 2026 Chude Muonelo. All rights reserved.<br />
+    Crystallize Lovers, a DBA of SlateRiver LLC, a New Mexico LLC<br />
+    <br />
+    This guide is for personal use only and is not to be redistributed, resold, or reproduced without written permission.<br />
+    Relationship Goals is not a substitute for licensed therapy, counseling, or mental health treatment.
+  </div>
+</div>
+
+</body>
+</html>
