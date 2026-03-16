@@ -1,0 +1,1309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>7 Days to Strengthen Your Marriage — Relationship Goals</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600&display=swap');
+
+    @page {
+      size: 8.5in 11in;
+      margin: 0;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:      #0E7C7B;
+      --teal-dark: #085A59;
+      --coral:     #E8603C;
+      --cream:     #FDF6EC;
+      --sand:      #F0E9D8;
+      --text:      #1A2E2E;
+      --text-mid:  #4A6565;
+      --text-dim:  #7A9898;
+      --white:     #FFFFFF;
+    }
+
+    body {
+      font-family: 'Inter', Georgia, serif;
+      background: var(--white);
+      color: var(--text);
+      font-size: 10.5pt;
+      line-height: 1.6;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ===== PAGE WRAPPER ===== */
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      page-break-after: always;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page:last-child { page-break-after: auto; }
+
+    /* ===== COVER PAGE ===== */
+    .cover {
+      background: var(--teal-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 1in;
+      min-height: 11in;
+    }
+
+    .cover-bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.06;
+    }
+    .cover-bg-circle.c1 { width: 6in; height: 6in; background: var(--coral); top: -2in; right: -2in; }
+    .cover-bg-circle.c2 { width: 4in; height: 4in; background: white; bottom: -1.5in; left: -1.5in; }
+
+    .cover-logo {
+      width: 0.7in;
+      height: 0.7in;
+      background: linear-gradient(135deg, var(--teal), var(--coral));
+      border-radius: 0.15in;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 18pt;
+      color: white;
+      margin: 0 auto 0.3in;
+    }
+
+    .cover-brand {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 0.6in;
+    }
+
+    .cover-divider {
+      width: 0.5in;
+      height: 2pt;
+      background: var(--coral);
+      margin: 0 auto 0.35in;
+    }
+
+    .cover h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 42pt;
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.2in;
+    }
+
+    .cover h1 span { color: var(--coral); font-style: italic; }
+
+    .cover-sub {
+      font-size: 12pt;
+      color: rgba(255,255,255,0.7);
+      max-width: 4.5in;
+      line-height: 1.65;
+      margin: 0 auto 0.5in;
+    }
+
+    .cover-hook {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14pt;
+      font-style: italic;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 0.6in;
+    }
+
+    .cover-includes {
+      display: flex;
+      flex-direction: column;
+      gap: 0.12in;
+      margin-bottom: 0.6in;
+    }
+
+    .cover-includes span {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.65);
+      letter-spacing: 0.03em;
+    }
+
+    .cover-footer {
+      position: absolute;
+      bottom: 0.4in;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 8pt;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.08em;
+    }
+
+    /* ===== INTRO PAGE ===== */
+    .intro-page {
+      padding: 0.85in 1in;
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 0.2in;
+      border-bottom: 1pt solid #D8E8E8;
+      margin-bottom: 0.45in;
+    }
+
+    .page-header .logo-inline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 800;
+      font-size: 9pt;
+      color: var(--teal-dark);
+      letter-spacing: 0.05em;
+    }
+
+    .page-header .page-num {
+      font-size: 8pt;
+      color: var(--text-dim);
+    }
+
+    .intro-page h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.2in;
+      line-height: 1.15;
+    }
+
+    .intro-page p {
+      font-size: 10.5pt;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 0.18in;
+      max-width: 5.5in;
+    }
+
+    .intro-callout {
+      background: var(--cream);
+      border-left: 3pt solid var(--teal);
+      border-radius: 4pt;
+      padding: 0.2in 0.25in;
+      margin: 0.3in 0;
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 13pt;
+      color: var(--teal-dark);
+      line-height: 1.55;
+    }
+
+    .how-to-use {
+      margin-top: 0.3in;
+    }
+
+    .how-to-use h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.15in;
+    }
+
+    .how-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.12in;
+    }
+
+    .how-item {
+      display: flex;
+      gap: 0.15in;
+      align-items: flex-start;
+    }
+
+    .how-num {
+      width: 0.22in;
+      height: 0.22in;
+      background: var(--teal);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 7.5pt;
+      font-weight: 700;
+      color: white;
+      flex-shrink: 0;
+      margin-top: 1pt;
+    }
+
+    .how-item p {
+      font-size: 10pt;
+      color: var(--text-mid);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.1in;
+      margin-top: 0.35in;
+    }
+
+    .overview-day {
+      text-align: center;
+      padding: 0.1in 0.05in;
+      background: var(--cream);
+      border-radius: 6pt;
+      border-top: 2pt solid var(--teal);
+    }
+
+    .overview-day .od-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      line-height: 1;
+      margin-bottom: 4pt;
+    }
+
+    .overview-day .od-label {
+      font-size: 7pt;
+      font-weight: 600;
+      color: var(--text-dim);
+      line-height: 1.3;
+    }
+
+    .intro-footer {
+      margin-top: auto;
+      padding-top: 0.2in;
+      border-top: 1pt solid #D8E8E8;
+      font-size: 8pt;
+      color: var(--text-dim);
+      font-style: italic;
+    }
+
+    /* ===== DAY PAGES ===== */
+    .day-page {
+      min-height: 11in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .day-header {
+      padding: 0.55in 1in 0.4in;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-header.teal { background: var(--teal-dark); }
+    .day-header.coral { background: var(--coral); }
+    .day-header.mixed {
+      background: linear-gradient(135deg, var(--teal-dark) 0%, #0A5A59 100%);
+    }
+
+    .day-header-bg {
+      position: absolute;
+      right: -0.5in;
+      top: -0.5in;
+      width: 3.5in;
+      height: 3.5in;
+      border-radius: 50%;
+      opacity: 0.06;
+      background: white;
+    }
+
+    .day-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 0.1in;
+    }
+
+    .day-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 11pt;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.05in;
+    }
+
+    .day-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32pt;
+      font-weight: 700;
+      color: white;
+      line-height: 1.1;
+      margin-bottom: 0.1in;
+    }
+
+    .day-emoji {
+      font-size: 26pt;
+      margin-bottom: 0.08in;
+      display: block;
+    }
+
+    .day-tagline {
+      font-size: 10.5pt;
+      color: rgba(255,255,255,0.75);
+      font-style: italic;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 12pt;
+      max-width: 4.5in;
+    }
+
+    .day-content {
+      padding: 0.4in 1in 0.3in;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25in;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.08in;
+    }
+
+    .mission-box {
+      background: var(--cream);
+      border-radius: 8pt;
+      padding: 0.22in 0.28in;
+      border-left: 3pt solid var(--teal);
+    }
+
+    .mission-box p {
+      font-size: 11pt;
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .mission-box .mission-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 5pt;
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--teal);
+      margin-top: 0.1in;
+    }
+
+    .why-box {
+      font-size: 9.5pt;
+      color: var(--text-mid);
+      line-height: 1.7;
+      padding: 0.15in 0;
+      border-top: 1pt solid #E8EDED;
+    }
+
+    .prompts-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1in;
+    }
+
+    .prompt-item {
+      display: flex;
+      gap: 0.12in;
+      align-items: flex-start;
+      background: white;
+      border: 1pt solid #D8E8E8;
+      border-radius: 6pt;
+      padding: 0.12in 0.15in;
+    }
+
+    .prompt-icon {
+      font-size: 12pt;
+      flex-shrink: 0;
+      margin-top: 1pt;
+    }
+
+    .prompt-item p {
+      font-size: 10pt;
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    .reflection-box {
+      border: 1pt dashed #B8D4D4;
+      border-radius: 8pt;
+      padding: 0.18in 0.22in;
+      flex: 1;
+      min-height: 1.2in;
+    }
+
+    .reflection-box .reflection-label {
+      font-size: 8pt;
+      font-weight: 600;
+      color: var(--text-dim);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.08in;
+    }
+
+    .reflection-lines {
+      display: flex;
+      flex-direction: column;
+      gap: 0.18in;
+    }
+
+    .reflection-line {
+      height: 1pt;
+      background: #E8EDED;
+      width: 100%;
+    }
+
+    .reward-strip {
+      background: linear-gradient(90deg, var(--teal-dark), #0A5A59);
+      padding: 0.15in 0.28in;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 6pt;
+    }
+
+    .reward-strip p {
+      font-size: 9.5pt;
+      color: rgba(255,255,255,0.9);
+      font-weight: 500;
+    }
+
+    .reward-strip .reward-badge {
+      background: var(--coral);
+      color: white;
+      font-size: 8pt;
+      font-weight: 700;
+      padding: 4pt 10pt;
+      border-radius: 100pt;
+      white-space: nowrap;
+    }
+
+    .day-footer {
+      padding: 0.12in 1in;
+      border-top: 1pt solid #E8EDED;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 7.5pt;
+      color: var(--text-dim);
+    }
+
+    .day-footer .progress-dots {
+      display: flex;
+      gap: 5pt;
+    }
+
+    .dot-item {
+      width: 8pt;
+      height: 8pt;
+      border-radius: 50%;
+      background: #D8E8E8;
+    }
+
+    .dot-item.done { background: var(--teal); }
+    .dot-item.active { background: var(--coral); }
+
+    /* ===== CLOSING PAGE ===== */
+    .closing-page {
+      background: var(--cream);
+      min-height: 11in;
+      padding: 0.85in 1in;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .closing-page h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 30pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 0.2in;
+      line-height: 1.15;
+    }
+
+    .closing-page p {
+      font-size: 10.5pt;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 0.15in;
+      max-width: 5.5in;
+    }
+
+    .next-steps {
+      margin-top: 0.35in;
+    }
+
+    .next-steps h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.18in;
+    }
+
+    .next-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.15in;
+    }
+
+    .next-card {
+      background: white;
+      border-radius: 8pt;
+      padding: 0.2in;
+      border: 1pt solid #D8E8E8;
+    }
+
+    .next-card .nc-icon { font-size: 16pt; margin-bottom: 0.08in; }
+    .next-card h4 {
+      font-size: 10pt;
+      font-weight: 700;
+      color: var(--teal-dark);
+      margin-bottom: 5pt;
+    }
+    .next-card p {
+      font-size: 9pt;
+      color: var(--text-mid);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .closing-quote {
+      margin-top: auto;
+      padding: 0.25in 0.3in;
+      background: var(--teal-dark);
+      border-radius: 8pt;
+      text-align: center;
+    }
+
+    .closing-quote p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 14pt;
+      font-style: italic;
+      color: white;
+      line-height: 1.6;
+      margin: 0;
+      max-width: 100%;
+    }
+
+    .closing-footer {
+      margin-top: 0.2in;
+      text-align: center;
+      font-size: 8pt;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
+
+    /* Print overrides */
+    @media print {
+      body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================= -->
+<!-- COVER PAGE                    -->
+<!-- ============================= -->
+<div class="page cover">
+  <div class="cover-bg-circle c1"></div>
+  <div class="cover-bg-circle c2"></div>
+
+  <div class="cover-logo">RG</div>
+  <div class="cover-brand">Relationship Goals · rg.hhc.travel</div>
+
+  <div class="cover-divider"></div>
+
+  <h1>7 Days to Strengthen<br /><span>Your Marriage</span></h1>
+
+  <p class="cover-sub">
+    Daily exercises to deepen intimacy, trust, and lasting connection.
+  </p>
+
+  <p class="cover-hook">"7 days. 7 conversations. A stronger marriage."</p>
+
+  <div class="cover-includes">
+    <span>&#10022; &nbsp;7 guided marriage-strengthening exercises</span>
+    <span>&#10022; &nbsp;Daily conversation prompts for couples</span>
+    <span>&#10022; &nbsp;Reflection space for both partners</span>
+    <span>&#10022; &nbsp;Intimacy and trust-building frameworks</span>
+  </div>
+
+  <div class="cover-footer">
+    &copy; 2026 Chude Muonelo &nbsp;&middot;&nbsp; Crystallize Lovers, a DBA of SlateRiver LLC &nbsp;&middot;&nbsp; All rights reserved.
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- INTRO / HOW TO USE            -->
+<!-- ============================= -->
+<div class="page intro-page">
+  <div class="page-header">
+    <span class="logo-inline">RG &middot; Relationship Goals</span>
+    <span class="page-num">Introduction</span>
+  </div>
+
+  <h2>Welcome</h2>
+
+  <p>
+    This guide is for couples who aren't in crisis — but who refuse to settle for "fine." Your marriage works. But you know it could be extraordinary.
+  </p>
+  <p>
+    Over the next seven days, you'll have structured conversations that go deeper than your daily routine allows. Each exercise takes 20–30 minutes and is designed to be done together, with honesty and intention.
+  </p>
+
+  <div class="intro-callout">
+    "There are no wrong answers. There is only showing up."
+  </div>
+
+  <p>
+    Set aside time each day — morning, evening, whenever you can both be fully present. Phones down. Defenses lowered. Hearts open.
+  </p>
+
+  <div class="how-to-use">
+    <h3>How To Use This Guide</h3>
+    <div class="how-list">
+      <div class="how-item">
+        <div class="how-num">1</div>
+        <p><strong>Set a time together.</strong> Morning coffee, after dinner, before bed — pick a time you can both commit to each day.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">2</div>
+        <p><strong>Read the exercise out loud.</strong> One partner reads the day's exercise to the other. This small act sets the tone.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">3</div>
+        <p><strong>Do the exercise together.</strong> Follow the prompts. Take your time. There's no rushing this.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">4</div>
+        <p><strong>Use the reflection space.</strong> Write down what came up for you — individually or together. These notes become your story.</p>
+      </div>
+      <div class="how-item">
+        <div class="how-num">5</div>
+        <p><strong>Don't skip days.</strong> The sequence matters. Each day builds on the last.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="overview-grid" style="margin-top:0.3in;">
+    <div class="overview-day"><div class="od-num">1</div><div class="od-label">The State of Us</div></div>
+    <div class="overview-day"><div class="od-num">2</div><div class="od-label">What Made Us</div></div>
+    <div class="overview-day"><div class="od-num">3</div><div class="od-label">Words You Need</div></div>
+    <div class="overview-day"><div class="od-num">4</div><div class="od-label">Unspoken Expectations</div></div>
+    <div class="overview-day"><div class="od-num">5</div><div class="od-label">The Dream Within</div></div>
+    <div class="overview-day"><div class="od-num">6</div><div class="od-label">Overdue Repair</div></div>
+    <div class="overview-day"><div class="od-num">7</div><div class="od-label">Marriage We Choose</div></div>
+  </div>
+
+  <div class="intro-footer">
+    This guide is for personal use only. Not for redistribution. &middot; Relationship Goals is not a substitute for licensed therapy or counseling.
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 1                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day One</div>
+    <span class="day-emoji">💍</span>
+    <div class="day-title">The State of Us</div>
+    <div class="day-tagline">Before you can strengthen your marriage, you need to see it clearly.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Exercise</div>
+      <div class="mission-box">
+        <p>
+          Before you can strengthen your marriage, you need to see it clearly — not the version you present to the world, but the real, daily texture of your partnership. Today you each take an honest inventory of where things stand.
+        </p>
+        <span class="mission-time">⏱ Allow 20 minutes · No phones · Side by side or face to face</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Honesty about where you are is the first act of building something better.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"On a scale of 1–10, how strong does our marriage feel to you right now? Explain the number."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What is the best thing about us right now — the thing that works even when other things don't?"</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What is one area where you feel we've been coasting instead of growing?"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What surprised you about your partner's answers? What do you agree on?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>&#10003; Complete today's exercise to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward &rarr;</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Strengthen Your Marriage &middot; Relationship Goals</span>
+    <div class="progress-dots">
+      <div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 1 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 2                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header coral">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Two</div>
+    <span class="day-emoji">🌅</span>
+    <div class="day-title">What Made Us</div>
+    <div class="day-tagline">Return to the beginning and remember why you chose each other.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Exercise</div>
+      <div class="mission-box">
+        <p>
+          Every marriage has an origin story — the moments that built it. Today you return to the beginning and remember why you chose each other. Not with nostalgia that avoids the present, but with gratitude that fuels the future.
+        </p>
+        <span class="mission-time">⏱ Allow 25 minutes · Be specific — details bring memories to life</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> Remembering why you started can remind you why you continue.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What moment made you certain about me? Describe it in detail."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What quality in me surprised you — something you didn't expect when we first met?"</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What from our early days do you want to recapture?"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What did you hear that you didn't know your partner still remembered?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>&#10003; Complete today's exercise to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward &rarr;</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Strengthen Your Marriage &middot; Relationship Goals</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 2 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 3                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header mixed">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Three</div>
+    <span class="day-emoji">💬</span>
+    <div class="day-title">The Words You Need to Hear</div>
+    <div class="day-tagline">Name the words you most need — and say the ones your partner most needs.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Exercise</div>
+      <div class="mission-box">
+        <p>
+          Most people walk around with unmet needs they've stopped asking for. In a strong marriage, partners learn to ask clearly and give generously. Today you name the words you most need to hear — and you say the words your partner most needs.
+        </p>
+        <span class="mission-time">⏱ Allow 20 minutes · No phones · Eye contact when sharing</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> The words that strengthen a marriage are often the ones that feel almost too vulnerable to say.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"The words I most need to hear from you right now are..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"Something I wish I said to you more often is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"One compliment I've been thinking but haven't said out loud is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What felt hardest to ask for? What felt best to finally say?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>&#10003; Complete today's exercise to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward &rarr;</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Strengthen Your Marriage &middot; Relationship Goals</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item active"></div>
+      <div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 3 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 4                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Four</div>
+    <span class="day-emoji">🔍</span>
+    <div class="day-title">Your Unspoken Expectations</div>
+    <div class="day-tagline">Surface the invisible expectations that shape — and strain — your marriage.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Exercise</div>
+      <div class="mission-box">
+        <p>
+          Every marriage carries invisible expectations — about roles, responsibilities, affection, ambition, parenting, money, sex. Many conflicts are actually collisions between expectations that were never spoken. Today you surface them.
+        </p>
+        <span class="mission-time">⏱ Allow 30 minutes · Be honest — kindly, but honestly</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> An expectation that stays unspoken becomes a resentment waiting to happen.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"One expectation I have of you that I've never clearly stated is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"One expectation I think you have of me that feels heavy or unclear is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"How can we handle unspoken expectations better going forward?"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">Which expectation surprised you most? What will you do differently now that it's spoken?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>&#10003; Complete today's exercise to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward &rarr;</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Strengthen Your Marriage &middot; Relationship Goals</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 4 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 5                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header coral">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Five</div>
+    <span class="day-emoji">🌠</span>
+    <div class="day-title">The Dream Within the Marriage</div>
+    <div class="day-tagline">Excavate the shared dream buried under daily life.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Exercise</div>
+      <div class="mission-box">
+        <p>
+          Every partner holds a dream for what the marriage could become — a vision of the life you want to build together. Sometimes those dreams get buried under logistics, routines, and responsibilities. Today you excavate them.
+        </p>
+        <span class="mission-time">⏱ Allow 25 minutes · Dream out loud — this is allowed</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> A marriage without a shared dream is a partnership running on maintenance. Dream together.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"In five years, what does our marriage look like at its absolute best?"</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What shared dream have we stopped talking about?"</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What is one bold thing we could do together this year that would make us feel alive?"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">Where did your dreams overlap? What does that tell you about what you both want?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>&#10003; Complete today's exercise to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward &rarr;</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Strengthen Your Marriage &middot; Relationship Goals</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 5 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 6                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header mixed">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Six</div>
+    <span class="day-emoji">🛠️</span>
+    <div class="day-title">The Repair That's Overdue</div>
+    <div class="day-tagline">Name the unresolved wound. Not to re-litigate. To heal.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Exercise</div>
+      <div class="mission-box">
+        <p>
+          Most marriages carry at least one unresolved wound — something that happened, was never fully addressed, and now sits between you like furniture you walk around. Today you name it. Not to re-litigate. To heal.
+        </p>
+        <span class="mission-time">⏱ Allow 30 minutes · No interruptions · Listen before responding</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> The repair you've been avoiding is often the one that would change everything.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"Something between us that I don't think we ever fully resolved is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What I needed from you at that time — and maybe still need — is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">💬</span>
+          <p>"What would 'resolved' look like to you? What would have to happen?"</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Reflection — Write It Down</div>
+      <div class="reflection-box">
+        <div class="reflection-label">What did it feel like to finally name it? What does repair look like from here?</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>&#10003; Complete today's exercise to unlock your local reward coupon</p>
+      <span class="reward-badge">Unlock Reward &rarr;</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Strengthen Your Marriage &middot; Relationship Goals</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item active"></div><div class="dot-item"></div>
+    </div>
+    <span>Day 6 of 7</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- DAY 7                         -->
+<!-- ============================= -->
+<div class="page day-page">
+  <div class="day-header teal">
+    <div class="day-header-bg"></div>
+    <div class="day-number">Day Seven</div>
+    <span class="day-emoji">✨</span>
+    <div class="day-title">The Marriage We Choose</div>
+    <div class="day-tagline">Not the marriage you fell into. The marriage you are building on purpose.</div>
+  </div>
+
+  <div class="day-content">
+    <div>
+      <div class="section-label">Today's Exercise</div>
+      <div class="mission-box">
+        <p>
+          You have spent seven days looking honestly at your marriage — its strengths, its wounds, its dreams. Today you declare what you're choosing. Not the marriage you fell into. The marriage you are building on purpose.
+        </p>
+        <span class="mission-time">⏱ Allow 25 minutes · Write first, then read aloud · Keep the notes</span>
+      </div>
+    </div>
+
+    <div class="why-box">
+      <strong style="color:var(--teal-dark);">Why this matters:</strong> The strongest marriages are not the ones that never struggled. They are the ones that chose each other — again and again — with full knowledge of what that choice costs and what it gives.
+    </div>
+
+    <div>
+      <div class="section-label">Conversation Prompts</div>
+      <div class="prompts-grid">
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"The marriage I want to build with you is one where..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"My commitment to you for the next season of our life is..."</p>
+        </div>
+        <div class="prompt-item">
+          <span class="prompt-icon">✍️</span>
+          <p>"One thing I will do differently, starting today, is..."</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label">Your Declaration — Write It Here</div>
+      <div class="reflection-box" style="min-height:1.4in;">
+        <div class="reflection-label">The marriage I choose:</div>
+        <div class="reflection-lines">
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+          <div class="reflection-line"></div><div class="reflection-line"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reward-strip">
+      <p>&#10003; You completed all 7 days. Your vacation credits are waiting.</p>
+      <span class="reward-badge">Claim Credits &rarr;</span>
+    </div>
+  </div>
+
+  <div class="day-footer">
+    <span>7 Days to Strengthen Your Marriage &middot; Relationship Goals</span>
+    <div class="progress-dots">
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item done"></div><div class="dot-item done"></div><div class="dot-item done"></div>
+      <div class="dot-item active"></div>
+    </div>
+    <span>Day 7 of 7 &middot; Complete</span>
+  </div>
+</div>
+
+
+<!-- ============================= -->
+<!-- CLOSING PAGE                  -->
+<!-- ============================= -->
+<div class="page closing-page">
+  <div class="page-header">
+    <span class="logo-inline">RG &middot; Relationship Goals</span>
+    <span class="page-num">What's Next</span>
+  </div>
+
+  <h2>Seven days is a beginning,<br />not an ending.</h2>
+
+  <p>The conversations you've had this week have opened doors that daily life often keeps closed. Keep them open.</p>
+
+  <p>If you want to continue this work with 365 days of guided exercises, daily missions, local reward coupons, and vacation credits toward HHC Travel — the Relationship Goals app is waiting for you.</p>
+
+  <div class="next-steps">
+    <h3>Continue the Practice</h3>
+    <div class="next-grid">
+      <div class="next-card">
+        <div class="nc-icon">📅</div>
+        <h4>Daily Love Missions</h4>
+        <p>Continue with daily $0.99 missions at rg.hhc.travel. Each one builds on the last — and keeps earning you rewards.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">🗺️</div>
+        <h4>Choose a Full Program</h4>
+        <p>Go deeper with a 30, 90, or 180-day guided program built for your specific challenge. Trust rebuilding. Communication. Infidelity recovery.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">🎁</div>
+        <h4>Redeem Your Rewards</h4>
+        <p>Check your vacation credits and local business coupons in your RG account. You've earned them.</p>
+      </div>
+      <div class="next-card">
+        <div class="nc-icon">✈️</div>
+        <h4>Plan Your Trip</h4>
+        <p>Your vacation credits are redeemable through Happy Holiday Couples Travel at HHC.travel. Start dreaming about where you'll go.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-quote" style="margin-top:0.35in;">
+    <p style="margin-bottom:0.2in;">"The strongest marriages are not the ones that never struggled.<br />They are the ones that chose each other — again and again."</p>
+    <p style="font-style:normal; font-family:'Inter',sans-serif; font-size:10pt; font-weight:600; color:var(--coral);">
+      <a href="https://app.rg.hhc.travel" style="color:var(--coral); text-decoration:none;">Start Your Journey &rarr; app.rg.hhc.travel</a>
+    </p>
+  </div>
+
+  <div class="closing-footer">
+    rg.hhc.travel &nbsp;&middot;&nbsp; &copy; 2026 Chude Muonelo. All rights reserved.<br />
+    Crystallize Lovers, a DBA of SlateRiver LLC, a New Mexico LLC<br />
+    <br />
+    This guide is for personal use only and is not to be redistributed, resold, or reproduced without written permission.<br />
+    Relationship Goals is not a substitute for licensed therapy, counseling, or mental health treatment.
+  </div>
+</div>
+
+</body>
+</html>
